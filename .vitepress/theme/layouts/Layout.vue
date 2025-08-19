@@ -7,7 +7,6 @@ import HighlightTargetedHeading from '@/components/HighlightTargetedHeading.vue'
 import NavBarUserAvatar from '@/components/NavBarUserAvatar.vue'
 import { Notifications } from '@/components/ui'
 import { Sonner } from '@/components/ui/sonner'
-import { loadFonts } from '@/composables/loadFonts'
 import { enableTransitions } from '@/shared'
 import { useIntersectionObserver } from '@vueuse/core'
 import mediumZoom from 'medium-zoom'
@@ -23,7 +22,6 @@ import '@/styles/kbd.css'
 import '@/styles/demo.css'
 import '@/styles/animation.css'
 import '@/styles/shadcn.css'
-import '@/styles/fonts.css'
 
 const { Layout } = DefaultTheme
 const { isDark, frontmatter } = useData()
@@ -45,21 +43,6 @@ function setupMediumZoom() {
     background: 'transparent',
   })
 }
-
-loadFonts([
-  {
-    fontName: 'HYWenHei-85W',
-    fontPath: '/fonts/HYWenHei-85W-zh-full.woff2',
-  },
-  {
-    fontName: 'HYWenHei-65W',
-    fontPath: '/fonts/HYWenHei-65W.woff2',
-  },
-  {
-    fontName: 'HYWenHei-45W',
-    fontPath: '/fonts/HYWenHei-45W.woff2',
-  },
-])
 
 onMounted(() => {
   setupMediumZoom()
